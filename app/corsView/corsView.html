@@ -1,0 +1,52 @@
+<BR><BR><BR>
+<div class="col-sm-8">
+
+  <h1>
+    Using <strong>$JSONP</strong>
+    <div class="pull-right">
+      <button type="button" class="btn btn-default btn-xs" ng-click="cvCtrl.loadJSONP()">
+        <span class="glyphicon glyphicon-refresh"></span> JSONP
+      </button>
+    </div>
+  </h1>
+
+  <table class="table table-striped">
+    <THEAD>
+      <TR>
+        <TH class="title" style="width:70%">Title</TH>
+        <TH class="votes">Votes</TH>
+        <TH class="opers"></TH>
+      </TR>
+    </THEAD>
+    <TBODY>
+      <TR ng-repeat="topic in cvCtrl.topics">
+        <TD class="title">{{topic.title}}</TD>
+        <TD class="votes">{{topic.votes}}</TD>
+        <TD class="opers">
+          <button type="button" class="btn btn-primary btn-sm" ng-click="cvCtrl.corsError('voting')">
+            <span class="glyphicon glyphicon-thumbs-up"></span> Vote 
+          </button>
+        
+          <button type="button" class="btn btn-default btn-sm" ng-click="cvCtrl.corsError('deleting')">
+            <span class="glyphicon glyphicon-trash"></span> Remove
+          </button>
+        </TD>
+      </TR>
+    </TBODY>
+  </table>
+
+  
+  <div class="row"><BR>
+    <div class="col-sm-8">
+      <form ng-submit="cvCtrl.corsError('adding')">
+        <input type="text"  class="form-control"  ng-model="cvCtrl.newTopicTitle" placeholder="New Topic">
+      </form>
+    </div>
+  </div>
+
+  <div class="row"><BR>
+    <div class="alert alert-danger col-sm-8" role="alert" ng-if="cvCtrl.showError">
+      <strong>Error {{cvCtrl.errorStatusText}} </strong> {{cvCtrl.errorText}}
+    </div>
+  </div>
+</div>

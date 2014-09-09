@@ -1,0 +1,43 @@
+<BR><BR><BR>
+<h1>Using <strong>$resource</strong></h1>
+<div class="col-sm-8">
+  <table class="table table-striped">
+    <THEAD>
+      <TR>
+        <TH class="title" style="width:70%">Title</TH>
+        <TH class="votes">Votes</TH>
+        <TH class="opers"></TH>
+      </TR>
+    </THEAD>
+    <TBODY>
+      <TR ng-repeat="topic in rvCtrl.topics">
+        <TD class="title">{{topic.title}}</TD>
+        <TD class="votes">{{topic.votes}}</TD>
+        <TD class="opers">
+          <button type="button" class="btn btn-primary btn-sm" ng-click="rvCtrl.sumVote(topic)">
+            <span class="glyphicon glyphicon-thumbs-up"></span> Vote 
+          </button>
+        
+          <button type="button" class="btn btn-default btn-sm" ng-click="rvCtrl.deleteTopic(topic)">
+            <span class="glyphicon glyphicon-trash"></span> Remove
+          </button>
+        </TD>
+      </TR>
+    </TBODY>
+  </table>
+
+  
+  <div class="row"><BR>
+    <div class="col-sm-8">
+      <form ng-submit="rvCtrl.addTopic()">
+        <input type="text"  class="form-control"  ng-model="rvCtrl.newTopicTitle" placeholder="New Topic">
+      </form>
+    </div>
+  </div>
+
+  <div class="row"><BR>
+    <div class="alert alert-danger col-sm-8" role="alert" ng-if="rvCtrl.showError">
+      <strong>Error  {{rvCtrl.errorStatusText}} </strong> {{rvCtrl.errorText}}
+    </div>
+  </div>
+</div>

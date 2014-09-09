@@ -1,0 +1,14 @@
+{
+  "name": "ajs-connectserver",
+  "description": "A short tutorial on how connect AngularJS to a server",
+  "version": "0.0.0",
+  "homepage": "https://github.com/carlos-/ajs-connectserver",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "angular": "1.2.x",
+    "angular-route": "1.2.x",
+    "angular-resource": "1.2.x",
+    "bootstrap": "3.2.x"
+  }
+}

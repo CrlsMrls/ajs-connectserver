@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="tutorialConnectApp" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <title>Connect AngularJS to server</title>
+  <meta name="description" content="">
+  <link rel="stylesheet" href="app.css"/>
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css"/>
+
+</head>
+<body>
+
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">Connect AngularJS to Server</a>
+        </div>
+      </div>
+    </div>
+
+
+  <!--[if lt IE 7]>
+  	<div class="alert alert-danger" role="alert">
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    </div>
+  <![endif]-->
+	<div class="container">
+	  <div ng-view></div> 
+  </div>
+
+
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-rc.0/angular.min.js"></script> -->
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
+  <script src="bower_components/angular-resource/angular-resource.js"></script>
+  <script src="app.js"></script>
+  <script src="homeView/homeView.js"></script>
+  <script src="corsView/corsView.js"></script>
+  <script src="httpView/httpView.js"></script>
+  <script src="resourceView/resourceView.js"></script>
+</body>
+</html>

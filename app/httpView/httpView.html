@@ -1,0 +1,47 @@
+<BR><BR><BR>
+<div class="col-sm-8">
+
+  <h1>
+    Using <strong>$http</strong>
+  </h1>
+
+  <table class="table table-striped">
+    <THEAD>
+      <TR>
+        <TH class="title" style="width:70%">Title</TH>
+        <TH class="votes">Votes</TH>
+        <TH class="opers"></TH>
+      </TR>
+    </THEAD>
+    <TBODY>
+      <TR ng-repeat="topic in hvCtrl.topics">
+        <TD class="title">{{topic.title}}</TD>
+        <TD class="votes">{{topic.votes}}</TD>
+        <TD class="opers">
+          <button type="button" class="btn btn-primary btn-sm" ng-click="hvCtrl.sumVote(topic)">
+            <span class="glyphicon glyphicon-thumbs-up"></span> Vote 
+          </button>
+        
+          <button type="button" class="btn btn-default btn-sm" ng-click="hvCtrl.deleteTopic(topic._id)">
+            <span class="glyphicon glyphicon-trash"></span> Remove
+          </button>
+        </TD>
+      </TR>
+    </TBODY>
+  </table>
+
+  
+  <div class="row"><BR>
+    <div class="col-sm-8">
+      <form ng-submit="hvCtrl.addTopic()">
+        <input type="text"  class="form-control"  ng-model="hvCtrl.newTopicTitle" placeholder="New Topic">
+      </form>
+    </div>
+  </div>
+
+  <div class="row"><BR>
+    <div class="alert alert-danger col-sm-8" role="alert" ng-if="hvCtrl.showError">
+      <strong>Error  {{hvCtrl.errorStatusText}} </strong> {{hvCtrl.errorText}}
+    </div>
+  </div>
+</div>
