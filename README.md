@@ -51,7 +51,7 @@ In order to apply Cross-origin resource sharing (CORS) used in JSONP, a second N
 node bin/alternative-server.js 
 ```
 
-Following this URL [http://localhost:3001] [43], $http and $resource won't work because the port is different, and the browser considers it violates the same-origin policy. You could prevent this uncommenting in the file *bin/server.js* the line:
+Following this URL [http://localhost:3001] [4], $http and $resource won't work because the port is different, and the browser considers it violates the same-origin policy. You could prevent this uncommenting in the file *bin/server.js* the line:
 
 > // app.use(cors());
 
