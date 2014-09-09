@@ -10,7 +10,8 @@ var express = require("express"),
 
 var app = express();
 
- app.use(cors()); /// => allow Cross-origin resource sharing (CORS)
+// Uncomment next line in order to allow CORS
+// app.use(cors()); /// => allow Cross-origin resource sharing (CORS)
 app.use( bodyParser.json() );       // to support JSON-encoded bodies
 app.use( bodyParser.urlencoded({ extended: true }) ); // to support URL-encoded bodies
 app.use(express.static(__dirname + '/../app'));
