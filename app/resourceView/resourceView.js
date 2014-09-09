@@ -1,4 +1,4 @@
-'use strict';tmpTopics
+'use strict';
 
 angular.module('tutorialConnectApp.resourceView', ['ngRoute'])
 
