@@ -36,7 +36,7 @@ node bin/server.js
 
 Some Linux distributions may need to rename *node* with *nodejs*.
 
-You are ready to go. Type in your favorite browser http://localhost:3000 
+You are ready to go. Type in your favorite browser [http://localhost:3000] [3]
 
 **Happy learning!!**
 
@@ -51,7 +51,7 @@ In order to apply Cross-origin resource sharing (CORS) used in JSONP, a second N
 node bin/alternative-server.js 
 ```
 
-Following this URL http://localhost:3001, $http and $resource won't work because the port is different, and the browser considers it violates the same-origin policy. You could prevent this uncommenting in the file *bin/server.js* the line:
+Following this URL [http://localhost:3001] [43], $http and $resource won't work because the port is different, and the browser considers it violates the same-origin policy. You could prevent this uncommenting in the file *bin/server.js* the line:
 
 > // app.use(cors());
 
@@ -96,6 +96,8 @@ MIT
 
 [1]:http://nodejs.org/download/
 [2]:http://www.mongodb.org/downloads
+[3]:http://localhost:3000
+[4]:http://localhost:3001
 
 [AngularJS]:https://angularjs.org/
 [npm]: https://github.com/npm/npm
